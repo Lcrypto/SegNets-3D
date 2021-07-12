@@ -168,7 +168,7 @@ or  testB and use --which_direction BtoA. Result from domain conversion should b
 
 
 
-In this example i use  12 images for train from 'CamVid data set'. You can use our images or CamVid data set full dataset, just download  run download_CamVid_dataset.sh
+In this example i use 12 images for train from 'CamVid data set'. You can use your images dataset or CamVid  full dataset, just download  run download_CamVid_dataset.sh
 
 ```
 wget http://web4.cs.ucl.ac.uk/staff/g.brostow/MotionSegRecData/files/701_StillsRaw_full.zip
