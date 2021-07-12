@@ -52,12 +52,14 @@ Place segmentation color or grayscale map images '/datasets/segSimonRock_BIN/tra
 
 
 3. choice correct input size parameter according smalles size of downsampled image --fine_size 180.  
-4. --load_size 4*X  recomend to chice 4 times larger than fine_size  X
-5. if use grayscale segmentation map use one channel --output_nc 1,  but you can try to train color (rgb) map segmentation as well --output_nc 3
+ ```
+ --load_size 4*X  recomend to chice 4 times larger than fine_size  X
+```
+if use grayscale segmentation map use one channel --output_nc 1,  but you can try to train color (rgb) map segmentation as well --output_nc 3
 
 
 
-7. Choice train parameters and architecture by changing defaul  values  at main.py or use arguments
+4. Choice train parameters and architecture by changing defaul  values  at main.py or use arguments
  
 ```
 
@@ -155,20 +157,20 @@ parser.add_argument('--test_dir', dest='test_dir', default='./test', help='test 
 ```
 
 
+ 
+5. For inference place validation images (png) to folder ./datasets/grey2seg/testA  
 
-8. For inference place validation images (png) to folder ./datasets/grey2seg/testA  and 
-
-
+```
 python main.py  --phase test --which_direction AtoB --model_dir 
+```
 
-
-Result should be in test folder.
+or  testB and use --which_direction BtoA. Result from domain conversion should be in test folder.
 
 
 
 In this example i use  12 images for train from 'CamVid data set'. You can use our images or CamVid data set full dataset, just download  run download_CamVid_dataset.sh
 
-'''
+```
 wget http://web4.cs.ucl.ac.uk/staff/g.brostow/MotionSegRecData/files/701_StillsRaw_full.zip
 wget http://web4.cs.ucl.ac.uk/staff/g.brostow/MotionSegRecData/data/LabeledApproved_full.zip
 
@@ -176,8 +178,6 @@ wget http://web4.cs.ucl.ac.uk/staff/g.brostow/MotionSegRecData/data/LabeledAppro
 unzip 701_StillsRaw_full.zip
 unzip LabeledApproved_full.zip
 
-'''
-
-
+```
 
  convert it and  place in folders.
