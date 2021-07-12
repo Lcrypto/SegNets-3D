@@ -60,6 +60,7 @@ Place segmentation color or grayscale map images '/datasets/segSimonRock_BIN/tra
 7. Choice train parameters and architecture by changing defaul  values  at main.py or use arguments
  
 '''
+
  training data arguments
 parser.add_argument('--gpuIDs', dest='gpuIDs', type=str, default='1', help='IDs for the GPUs. Empty for CPU. Nospaces')
 parser.add_argument('--dataset_dir', dest='dataset_dir', default='segSimonRock_BIN', help='path of the dataset')
@@ -114,7 +115,7 @@ parser.add_argument('--c2ganFlag', dest='c2ganFlag', type=bool, default=False,
                     help='flag for training the c2gan network')
 asymmetric models
 
-# parser.add_argument('--acType', dest='acType', type=str, default='semSeg', help='which model is asymetric, semSeg, or superRes')
+ parser.add_argument('--acType', dest='acType', type=str, default='semSeg', help='which model is asymetric, semSeg, or superRes')
 parser.add_argument('--acType', dest='acType', type=str, default='superRes',
                     help='which model is asymetric, semSeg, or superRes')
 
@@ -151,6 +152,7 @@ parser.add_argument('--testInputs', dest='testInputs', default='./datasets/grey2
                     help='test input images are here')
 parser.add_argument('--which_direction', dest='which_direction', default='AtoB', help='AtoB or BtoA')
 parser.add_argument('--test_dir', dest='test_dir', default='./test', help='test sample are saved here')
+
 '''
 
 
