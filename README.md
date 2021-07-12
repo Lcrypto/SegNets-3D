@@ -59,7 +59,7 @@ Place segmentation color or grayscale map images '/datasets/segSimonRock_BIN/tra
 
 7. Choice train parameters and architecture by changing defaul  values  at main.py or use arguments
  
-'''
+```
 
  training data arguments
 parser.add_argument('--gpuIDs', dest='gpuIDs', type=str, default='1', help='IDs for the GPUs. Empty for CPU. Nospaces')
@@ -152,8 +152,7 @@ parser.add_argument('--testInputs', dest='testInputs', default='./datasets/grey2
                     help='test input images are here')
 parser.add_argument('--which_direction', dest='which_direction', default='AtoB', help='AtoB or BtoA')
 parser.add_argument('--test_dir', dest='test_dir', default='./test', help='test sample are saved here')
-
-'''
+```
 
 
 
