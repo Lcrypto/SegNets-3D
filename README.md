@@ -58,9 +58,9 @@ Place segmentation color or grayscale map images '/datasets/segSimonRock_BIN/tra
 
 
 7. Choice train parameters and architecture by changing defaul  values  at main.py or use arguments
-8. 
+ 
 '''
-# training data arguments
+ training data arguments
 parser.add_argument('--gpuIDs', dest='gpuIDs', type=str, default='1', help='IDs for the GPUs. Empty for CPU. Nospaces')
 parser.add_argument('--dataset_dir', dest='dataset_dir', default='segSimonRock_BIN', help='path of the dataset')
 parser.add_argument('--load2ram', dest='load2ram', type=bool, default=False, help='load dataset into ram')
@@ -98,19 +98,22 @@ parser.add_argument('--use_resnet', dest='use_resnet', type=bool, default=True,
                     help='generation network using residual block')
 parser.add_argument('--use_lsgan', dest='use_lsgan', type=str2bool, default=True,
                     help='gan loss defined in lsgan')  # patchGAN plays poorly with scgan
-# symcycleganFlags
+ symcycleganFlags
+ 
 parser.add_argument('--c1ganFlag', dest='c1ganFlag', type=bool, default=False,
                     help='flag for training a symmetric type cyclegan network')
-# SRGAN arguments
+SRGAN arguments
+
 parser.add_argument('--srganFlag', dest='srganFlag', type=bool, default=True,
                     help='flag for training a feed forward network')
-# asymCGAN arguments
+ asymCGAN arguments
 parser.add_argument('--ACGANFlag', dest='ACGANFlag', type=bool, default=False,
                     help='flag for training the Asymetric cyclegan network')
-# C2GAN arguments
+ C2GAN arguments
 parser.add_argument('--c2ganFlag', dest='c2ganFlag', type=bool, default=False,
                     help='flag for training the c2gan network')
-# asymmetric models
+asymmetric models
+
 # parser.add_argument('--acType', dest='acType', type=str, default='semSeg', help='which model is asymetric, semSeg, or superRes')
 parser.add_argument('--acType', dest='acType', type=str, default='superRes',
                     help='which model is asymetric, semSeg, or superRes')
@@ -120,12 +123,14 @@ parser.add_argument('--segU', dest='segU', type=str2bool, default=False, help='s
 parser.add_argument('--numClasses', dest='numClasses', type=str2int, default=6,
                     help='number of semantic classes for segmentation')
 parser.add_argument('--use_gan', dest='use_gan', type=str2bool, default=True, help='if srgan has gan active')
-# SR arguments
+
+ SR arguments
 parser.add_argument('--nsrf', dest='nsrf', type=int, default=64, help='# of SR filters in first conv layer')
 parser.add_argument('--numResBlocks', dest='numResBlocks', type=int, default=16, help='# of resBlocks in EDSR')
 parser.add_argument('--sr_nc', dest='sr_nc', type=int, default=3,
                     help='# of image channels for C')  # add this for hyperspectral support
-# loss coefficients
+                    
+ loss coefficients
 parser.add_argument('--L1_lambda', dest='L1_lambda', type=str2float, default=10.0,
                     help='weight on L1 term for normal cycle')
 parser.add_argument('--idt_lambda', dest='idt_lambda', type=str2float, default=0.0,
@@ -141,13 +146,22 @@ parser.add_argument('--idt_sr_lambda', dest='idt_sr_lambda', type=str2float, def
 parser.add_argument('--tv_sr_lambda', dest='tv_sr_lambda', type=str2float, default=0.0,
                     help='weight assigned to the SR total variation loss function')  # this is a crutch. avoid it. if needed, tune it carefuly. div2k accepts 1-2e-4, and fails at 1e-3 vs 10
 
-# testing arguments
+ testing arguments
 parser.add_argument('--testInputs', dest='testInputs', default='./datasets/grey2seg/testA',
                     help='test input images are here')
 parser.add_argument('--which_direction', dest='which_direction', default='AtoB', help='AtoB or BtoA')
 parser.add_argument('--test_dir', dest='test_dir', default='./test', help='test sample are saved here')
 '''
 
+
+
+8. For inference place validation images (png) to folder ./datasets/grey2seg/testA  and 
+
+
+python main.py  --phase test --which_direction AtoB --model_dir 
+
+
+Result should be in test folder.
 
 
 
