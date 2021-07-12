@@ -804,7 +804,7 @@ class cyclegan(object):
     def test(self, args):
         """Test cyclegan"""
         self._build_model()
-        self.saver = tf.compat.v1.train.Saver(self.t_vars)
+        self.saver = tf.train.Saver(self.t_vars)
         init_op = tf.global_variables_initializer()
         self.sess.run(init_op)
         #        if args.which_direction == 'AtoB':

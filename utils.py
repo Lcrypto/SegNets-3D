@@ -2,7 +2,7 @@
 Some codes from https://github.com/Newmu/dcgan_code
 """
 from __future__ import division
-
+import os
 from sys import stdout
 
 import h5py
@@ -11,8 +11,9 @@ from PIL import Image
 
 
 def load_test_image(img_path):
-    ext = img_path.split('.')[1]
-    if ext == 'png':
+    filename, ext = os.path.splitext(img_path)
+    #ext = img_path.split('.')[1]
+    if ext == '.png':
         img = Image.open(img_path)
         if img.mode != 'RGB':  # makes it triple channel
             img = img.convert('RGB')
