@@ -41,7 +41,7 @@ pip install tensorlayer==1.11;
 
 
 2. Convert your train input downsampled 4 times images, segmentation color or grayscale map (with 4 times larger resolution to numpy (or pickle format).
-If you don't know how use script runSRpconversion.sh from https://github.com/Lcrypto/EDSRGAN-3D project.
+If you don't know how use script runSRpconversion.sh from https://github.com/Lcrypto/EDSRGAN-3D project. if you use 'png' conversion not required.
 
 
 Place downsampled 4 times images to folder  '/datasets/segSimonRock_BIN/trainA'
