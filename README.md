@@ -180,4 +180,4 @@ unzip LabeledApproved_full.zip
 
 
 
- convert it in place in folders.
+ convert it and  place in folders.
