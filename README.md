@@ -1,6 +1,6 @@
 # SegNets- 2D/3D Deep Neural Network Using Stack of Super Resolution Deep Neural Network and GANs: cycleGAN, SRGAN, ESRGAN  
 
-Ready to use rewritten and fix some errors project from original rep https://github.com/yingDaWang-UNSW/SegNets-3D for doing end-to-end Train and Inference 2D/3D images Super resolution with Segmentation using SRCNN Resnet and SRGANs: ESRGAN, SRGAN, WDSRGAN. For detail read Wang Ying Da PH.D THESIS Machine Learning Methods and Computationally Efficient Techniques in Digital Rock Analysis, 2020 and all related articles. Please put a star to https://github.com/yingDaWang-UNSW to support his work.
+Ready to use rewritten and fixed some errors project from original rep https://github.com/yingDaWang-UNSW/SegNets-3D for doing end-to-end Train and Inference 2D/3D images Super resolution with Segmentation using SRCNN Resnet and SRGANs: ESRGAN, SRGAN, WDSRGAN. For detail read Wang Ying Da PH.D THESIS Machine Learning Methods and Computationally Efficient Techniques in Digital Rock Analysis, 2020 and all related articles. Please put a star to https://github.com/yingDaWang-UNSW to support his work.
 
 Because Dr Ying Da Wang not include train dataset i  add images for train from 'CamVid data set' Brostow, Gabriel J., Julien Fauqueur, and Roberto Cipolla. "Semantic Object Classes in Video: A High-Definition Ground Truth Database." Pattern Recognition Letters. Vol. 30, Issue 2, 2009, pp 88-97.
 
