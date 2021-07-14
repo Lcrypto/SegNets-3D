@@ -40,7 +40,7 @@ def str2float(v):
 # TODO change semseg to scale data from -1 to 1?
 parser = argparse.ArgumentParser(description='')
 # training data arguments
-parser.add_argument('--gpuIDs', dest='gpuIDs', type=str, default='1', help='IDs for the GPUs. Empty for CPU. Nospaces')
+parser.add_argument('--gpuIDs', dest='gpuIDs', type=str, default='0', help='IDs for the GPUs. Empty for CPU. Nospaces')
 parser.add_argument('--dataset_dir', dest='dataset_dir', default='segSimonRock_BIN', help='path of the dataset')
 parser.add_argument('--load2ram', dest='load2ram', type=bool, default=False, help='load dataset into ram')
 parser.add_argument('--epoch', dest='epoch', type=int, default=2, help='# of epoch')
