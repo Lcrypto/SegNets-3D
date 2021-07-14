@@ -1,4 +1,4 @@
-# SegNets- 2D/3D Deep Neural Network Using Stack of Super Resolution Deep Neural Network and GANs: cycleGAN, SRGAN, ESRGAN  
+# TensorFlow 1.12 SegNets- 2D/3D Deep Neural Network Using Stack of Super Resolution Deep Neural Network and GANs: cycleGAN, SRGAN, ESRGAN  
 
 Ready to use rewritten and fixed some errors project from original rep https://github.com/yingDaWang-UNSW/SegNets-3D for doing end-to-end Train and Inference 2D/3D images Super resolution with Segmentation using SRCNN Resnet and SRGANs: ESRGAN, SRGAN, WDSRGAN. For detail read Wang Ying Da PH.D THESIS Machine Learning Methods and Computationally Efficient Techniques in Digital Rock Analysis, 2020 and all related articles. Please put a star to https://github.com/yingDaWang-UNSW to support his work.
 
@@ -13,7 +13,7 @@ Let use Env, because SRDNN use old Tensorflow 1.12 with Tensorlayer 1.11 (delete
 
 Let consider Mac OS X, another platforms require similar dependency.
 
-Root folder of project './GAN_PhysRock&Roll/' 
+Root folder of project './SegNets-3D/' 
 
 1. run sh script  installSRMac.sh
 
@@ -34,8 +34,8 @@ conda info --envs;
 
 
 conda install tensorflow=1.12; 
+conda install tensorflow-gpu=1.12; 
 conda install pillow;
-conda install -c conda-forge gooey;
 pip install tensorlayer==1.11;
 ```
 
